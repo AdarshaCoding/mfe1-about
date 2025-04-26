@@ -1,0 +1,30 @@
+{
+  "name": "mfe1",
+  "version": "1.0.0",
+  "description": "About - Microfrontend",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack",
+    "test": "jest"
+  },
+  "keywords": [
+    "MFE"
+  ],
+  "author": "Adarsha",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^10.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}
