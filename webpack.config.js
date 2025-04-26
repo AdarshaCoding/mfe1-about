@@ -24,13 +24,20 @@ module.exports = {
       exposes: {
         "./About": "./src/About",
       },
-      shared: ["react", "react-dom"],
+      remotes: {
+        host: "host@http://localhost:3000/remoteEntry.js", // adjust the port if different
+      },
+      // shared: ["react", "react-dom"],
+      shared: {
+        react: { singleton: true, requiredVersion: "^19.0.0" },
+        "react-dom": { singleton: true, requiredVersion: "^19.0.0" },
+      },
     }),
   ],
   module: {
     rules: [
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: "babel-loader" },
-      { test: /\.css$/, use: ["style-loader", "css-loader", "postcss-loader"] },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] },
     ],
   },
   resolve: { extensions: [".js", ".jsx"] },
